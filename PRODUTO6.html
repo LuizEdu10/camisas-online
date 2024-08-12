@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especificações da Camiseta 6</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Camiseta 6</h1>
+            <nav>
+                <ul>
+                    <li><a href="CAMISETAONLINE.html">Home</a></li>
+                    <li><a href="CAMISETAONLINE.html#products">Produtos</a></li>
+                    <li><a href="CAMISETAONLINE.html#contact">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="product-detail">
+        <div class="container">
+            <img src="images/produto6.jpg" alt="Camiseta 6">
+            <h2>Especificações</h2>
+            <p>Descrição detalhada da camiseta 6.</p>
+            <p>Material: Algodão e Poliéster</p>
+            <p>Tamanho: P, M, G, GG</p>
+            <p>Preço: R$ 160,00</p>
+            <button class="btn btn-success add-to-cart" data-name="Camiseta 6" data-price="160.00">Adicionar ao Carrinho</button>
+        </div>
+    </section>
+
+    <!-- Carrinho -->
+    <section class="cart">
+        <div class="container">
+            <h2>Carrinho</h2>
+            <ul id="cartItems"></ul>
+            <p>Total: R$ <span id="cartTotal">0.00</span></p>
+            <p>Itens no carrinho: <span id="cartCount">0</span></p>
+            <form id="checkoutForm">
+                <input type="text" id="name" placeholder="Seu Nome" required>
+                <input type="text" id="address" placeholder="Seu Endereço" required>
+                <input type="text" id="phone" placeholder="Seu Telefone" required>
+                <button type="submit" class="btn btn-primary">Finalizar Compra</button>
+            </form>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Loja de Vendas. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

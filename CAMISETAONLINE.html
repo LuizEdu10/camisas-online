@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Vendas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Camisetas Online</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Produtos</a></li>
+                    <li><a href="#more-products">Mais Produtos</a></li>
+                    <li><a href="contato.html" target="_blank">Contato</a></li>
+                </ul>
+            </nav>
+            <button id="cartButton" class="btn btn-primary" data-toggle="modal" data-target="#cartModal">Carrinho (<span id="cartCount">0</span>)</button>
+        </div>
+    </header>
+    
+    <section id="home">
+        <div class="banner">
+            <h2>Bem-vindo à nossa Loja</h2>
+            <p>Aqui você encontra as melhores camisetas de futebol pelo melhor preço.</p>
+        </div>
+    </section>
+    
+    <section id="products">
+        <div class="container">
+            <h2>Produtos</h2>
+            <div class="product-grid">
+                <div class="product">
+                    <a href="produto1.html">
+                        <img src="images/produto1.jpg" alt="Camiseta Barcelona 24/25">
+                        <h3>Camiseta Barcelona 24/25</h3>
+                    </a>
+                    <p>Preço: R$ 100,00</p>
+                    <button class="btn btn-success add-to-cart" data-name="Camiseta Barcelona 24/25" data-price="100">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product">
+                    <a href="produto2.html">
+                        <img src="images/produto2.jpg" alt="Camiseta 2">
+                        <h3>Camiseta 2</h3>
+                    </a>
+                    <p>Preço: R$ 200,00</p>
+                    <button class="btn btn-success add-to-cart" data-name="Camiseta 2" data-price="200">Adicionar ao Carrinho</button>
+                </div>
+                <!-- Adicione mais produtos conforme necessário -->
+            </div>
+            <p><a href="#more-products" class="btn-more">Veja mais produtos</a></p>
+        </div>
+    </section>
+    
+    <section id="more-products">
+        <div class="container">
+            <h2>Mais Produtos</h2>
+            <div class="product-grid">
+                <div class="product">
+                    <a href="produto3.html">
+                        <img src="images/produto3.jpg" alt="Camiseta 3">
+                        <h3>Camiseta 3</h3>
+                    </a>
+                    <p>Preço: R$ 150,00</p>
+                    <button class="btn btn-success add-to-cart" data-name="Camiseta 3" data-price="150">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product">
+                    <a href="produto4.html">
+                        <img src="images/produto4.jpg" alt="Camiseta 4">
+                        <h3>Camiseta 4</h3>
+                    </a>
+                    <p>Preço: R$ 120,00</p>
+                    <button class="btn btn-success add-to-cart" data-name="Camiseta 4" data-price="120">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product">
+                    <a href="produto5.html">
+                        <img src="images/produto5.jpg" alt="Camiseta 5">
+                        <h3>Camiseta 5</h3>
+                    </a>
+                    <p>Preço: R$ 180,00</p>
+                    <button class="btn btn-success add-to-cart" data-name="Camiseta 5" data-price="180">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product">
+                    <a href="produto6.html">
+                        <img src="images/produto6.jpg" alt="Camiseta 6">
+                        <h3>Camiseta 6</h3>
+                    </a>
+                    <p>Preço: R$ 160,00</p>
+                    <button class="btn btn-success add-to-cart" data-name="Camiseta 6" data-price="160">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product">
+                    <a href="produto7.html">
+                        <img src="images/produto7.jpg" alt="Camiseta 7">
+                        <h3>Camiseta 7</h3>
+                    </a>
+                    <p>Preço: R$ 140,00</p>
+                    <button class="btn btn-success add-to-cart" data-name="Camiseta 7" data-price="140">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Modal do Carrinho -->
+    <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cartModalLabel">Carrinho de Compras</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ul id="cartItems"></ul>
+                    <p>Total: R$ <span id="cartTotal">0.00</span></p>
+                    <form id="checkoutForm">
+                        <div class="form-group">
+                            <label for="name">Nome:</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Endereço:</label>
+                            <input type="text" class="form-control" id="address" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefone:</label>
+                            <input type="text" class="form-control" id="phone" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Finalizar Pedido</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Loja de Vendas. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
