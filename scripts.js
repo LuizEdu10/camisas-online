@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const message = `Olá, gostaria de fazer um pedido:\n\n${orderDetails}\n\nTotal: R$ ${total}\n\nNome: ${name}\nEndereço: ${address}\nTelefone: ${phone}`;
 
-        const whatsappUrl = `https://wa.me/5549991688881?text=${encodeURIComponent(message)}`;
+        const whatsappUrl = `https://wa.me/554999101010?text=${encodeURIComponent(message)}`;
         window.open(whatsappUrl, '_blank');
     }
 });
